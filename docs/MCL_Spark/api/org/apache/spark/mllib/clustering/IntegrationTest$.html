@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>MCL - MCL_spark documentation - org.apache.spark.mllib.clustering.MCL</title>
-          <meta name="description" content="MCL - MCL spark documentation - org.apache.spark.mllib.clustering.MCL" />
-          <meta name="keywords" content="MCL MCL spark documentation org.apache.spark.mllib.clustering.MCL" />
+          <title>IntegrationTest - MCL_spark documentation - org.apache.spark.mllib.clustering.IntegrationTest</title>
+          <meta name="description" content="IntegrationTest - MCL spark documentation - org.apache.spark.mllib.clustering.IntegrationTest" />
+          <meta name="keywords" content="IntegrationTest MCL spark documentation org.apache.spark.mllib.clustering.IntegrationTest" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -12,7 +12,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../../../index.html';
-            var hash = 'org.apache.spark.mllib.clustering.MCL$';
+            var hash = 'org.apache.spark.mllib.clustering.IntegrationTest$';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -24,9 +24,9 @@
         </head>
         <body class="value">
       <div id="definition">
-        <a href="MCL.html" title="Go to companion"><img src="../../../../../lib/object_to_class_big.png" /></a>
+        <img src="../../../../../lib/object_big.png" />
         <p id="owner"><a href="../../../../package.html" class="extype" name="org">org</a>.<a href="../../../package.html" class="extype" name="org.apache">apache</a>.<a href="../../package.html" class="extype" name="org.apache.spark">spark</a>.<a href="../package.html" class="extype" name="org.apache.spark.mllib">mllib</a>.<a href="package.html" class="extype" name="org.apache.spark.mllib.clustering">clustering</a></p>
-        <h1><a href="MCL.html" title="Go to companion">MCL</a></h1>
+        <h1>IntegrationTest</h1>
       </div>
 
       <h4 id="signature" class="signature">
@@ -35,13 +35,13 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <span class="name">MCL</span><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">IntegrationTest</span><span class="result"> extends <span class="extype" name="org.scalatest.Tag">Tag</span></span>
       </span>
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="org.scalatest.Tag">Tag</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -59,7 +59,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="org.apache.spark.mllib.clustering.MCL"><span>MCL</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="org.apache.spark.mllib.clustering.IntegrationTest"><span>IntegrationTest</span></li><li class="in" name="org.scalatest.Tag"><span>Tag</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -266,6 +266,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="org.scalatest.Tag#name" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="name:String"></a>
+      <a id="name:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">name</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Tag</dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -331,21 +344,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="org.apache.spark.mllib.clustering.MCL#train" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="train(graph:org.apache.spark.graphx.Graph[String,Double],expansionRate:Int,inflationRate:Double,convergenceRate:Double,epsilon:Double,maxIterations:Int,selfLoopWeight:Double,graphOrientationStrategy:String):org.apache.spark.mllib.clustering.MCLModel"></a>
-      <a id="train(Graph[String,Double],Int,Double,Double,Double,Int,Double,String):MCLModel"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">train</span><span class="params">(<span name="graph">graph: <span class="extype" name="org.apache.spark.graphx.Graph">Graph</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Double">Double</span>]</span>, <span name="expansionRate">expansionRate: <span class="extype" name="scala.Int">Int</span> = <span class="symbol">2</span></span>, <span name="inflationRate">inflationRate: <span class="extype" name="scala.Double">Double</span> = <span class="symbol">2.0</span></span>, <span name="convergenceRate">convergenceRate: <span class="extype" name="scala.Double">Double</span> = <span class="symbol">0.01</span></span>, <span name="epsilon">epsilon: <span class="extype" name="scala.Double">Double</span> = <span class="symbol">0.01</span></span>, <span name="maxIterations">maxIterations: <span class="extype" name="scala.Int">Int</span> = <span class="symbol">10</span></span>, <span name="selfLoopWeight">selfLoopWeight: <span class="extype" name="scala.Double">Double</span> = <span class="symbol">1</span></span>, <span name="graphOrientationStrategy">graphOrientationStrategy: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;undirected&quot;</span></span>)</span><span class="result">: <a href="MCLModel.html" class="extype" name="org.apache.spark.mllib.clustering.MCLModel">MCLModel</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Train an MCL model using the given set of parameters.</p><div class="fullcomment"><div class="comment cmt"><p>Train an MCL model using the given set of parameters.
-</p></div><dl class="paramcmts block"><dt class="param">graph</dt><dd class="cmt"><p>training points stored as <code>BlockMatrix</code></p></dd><dt class="param">expansionRate</dt><dd class="cmt"><p>expansion rate of adjacency matrix at each iteration</p></dd><dt class="param">inflationRate</dt><dd class="cmt"><p>inflation rate of adjacency matrix at each iteration</p></dd><dt class="param">convergenceRate</dt><dd class="cmt"><p>stop condition for convergence of MCL algorithm</p></dd><dt class="param">epsilon</dt><dd class="cmt"><p>minimum percentage of a weight edge to be significant</p></dd><dt class="param">maxIterations</dt><dd class="cmt"><p>maximal number of iterations for a non convergent algorithm</p></dd><dt class="param">selfLoopWeight</dt><dd class="cmt"><p>a coefficient between 0 and 1 to influence clustering granularity and objective</p></dd><dt class="param">graphOrientationStrategy</dt><dd class="cmt"><p>chose a graph strategy completion depending on its nature. 3 choices: undirected, directed, birected.</p></dd><dt>returns</dt><dd class="cmt"><p>an MCL object
-</p></dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
@@ -412,10 +410,8 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.Serializable">
-              <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
-            </div><div class="parent" name="java.io.Serializable">
-              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
+        <div class="parent" name="org.scalatest.Tag">
+              <h3>Inherited from <span class="extype" name="org.scalatest.Tag">Tag</span></h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
