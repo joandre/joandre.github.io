@@ -292,19 +292,6 @@ convergenceRate: 0.01, epsilon: 0.05, maxIterations: 10, selfLoopWeight: 0.1, gr
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="org.apache.spark.mllib.clustering.MCL#getConvergenceRate" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getConvergenceRate:Double"></a>
-      <a id="getConvergenceRate:Double"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getConvergenceRate</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Get stop condition for convergence of MCL algorithm</p>
     </li><li name="org.apache.spark.mllib.clustering.MCL#getEpsilon" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getEpsilon:Double"></a>
       <a id="getEpsilon:Double"></a>
@@ -525,21 +512,6 @@ convergenceRate: 0.01, epsilon: 0.05, maxIterations: 10, selfLoopWeight: 0.1, gr
       <p class="shortcomment cmt">Train MCL algorithm.</p><div class="fullcomment"><div class="comment cmt"><p>Train MCL algorithm.
 </p></div><dl class="paramcmts block"><dt class="param">graph</dt><dd class="cmt"><p>a graph to partitioned</p></dd><dt>returns</dt><dd class="cmt"><p>an MCLModel where each node is associated to one or more clusters
 </p></dd></dl></div>
-    </li><li name="org.apache.spark.mllib.clustering.MCL#setConvergenceRate" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="setConvergenceRate(convergenceRate:Double):org.apache.spark.mllib.clustering.MCL"></a>
-      <a id="setConvergenceRate(Double):MCL"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">setConvergenceRate</span><span class="params">(<span name="convergenceRate">convergenceRate: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.mllib.clustering.MCL">MCL</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Set the convergence condition.</p><div class="fullcomment"><div class="comment cmt"><p>Set the convergence condition.</p><p>Default: 0.01.
-</p></div><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt">IllegalArgumentException<p>convergenceRate must be higher than 0 and lower than 1
-</p></span></dd></dl></div>
     </li><li name="org.apache.spark.mllib.clustering.MCL#setEpsilon" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="setEpsilon(epsilon:Double):org.apache.spark.mllib.clustering.MCL"></a>
       <a id="setEpsilon(Double):MCL"></a>
