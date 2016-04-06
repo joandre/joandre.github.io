@@ -351,15 +351,15 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="org.apache.spark.mllib.clustering.MCLUtils#preprocessGraph" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="preprocessGraph(graph:org.apache.spark.graphx.Graph[String,Double],lookupTable:org.apache.spark.sql.DataFrame):org.apache.spark.graphx.Graph[Int,Double]"></a>
-      <a id="preprocessGraph(Graph[String,Double],DataFrame):Graph[Int,Double]"></a>
+      <a id="preprocessGraph[VD](graph:org.apache.spark.graphx.Graph[VD,Double],lookupTable:org.apache.spark.sql.DataFrame):org.apache.spark.graphx.Graph[Int,Double]"></a>
+      <a id="preprocessGraph[VD](Graph[VD,Double],DataFrame):Graph[Int,Double]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">preprocessGraph</span><span class="params">(<span name="graph">graph: <span class="extype" name="org.apache.spark.graphx.Graph">Graph</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Double">Double</span>]</span>, <span name="lookupTable">lookupTable: <span class="extype" name="org.apache.spark.sql.DataFrame">DataFrame</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.graphx.Graph">Graph</span>[<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>]</span>
+        <span class="name">preprocessGraph</span><span class="tparams">[<span name="VD">VD</span>]</span><span class="params">(<span name="graph">graph: <span class="extype" name="org.apache.spark.graphx.Graph">Graph</span>[<span class="extype" name="org.apache.spark.mllib.clustering.MCLUtils.preprocessGraph.VD">VD</span>, <span class="extype" name="scala.Double">Double</span>]</span>, <span name="lookupTable">lookupTable: <span class="extype" name="org.apache.spark.sql.DataFrame">DataFrame</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.graphx.Graph">Graph</span>[<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Get a suitable graph for MCL model algorithm.</p><div class="fullcomment"><div class="comment cmt"><p>Get a suitable graph for MCL model algorithm.</p><p>Each vertex id in the graph corresponds to a row id in the adjacency matrix.
@@ -500,26 +500,7 @@
 
         
 
-        <div id="values" class="values members">
-              <h3>Deprecated Value Members</h3>
-              <ol><li name="org.apache.spark.mllib.clustering.MCLUtils#selfLoopManager2" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="selfLoopManager2(mat:org.apache.spark.mllib.linalg.distributed.IndexedRowMatrix,selfLoopWeight:Double):org.apache.spark.mllib.linalg.distributed.IndexedRowMatrix"></a>
-      <a id="selfLoopManager2(IndexedRowMatrix,Double):IndexedRowMatrix"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name deprecated" title="Deprecated: ">selfLoopManager2</span><span class="params">(<span name="mat">mat: <span class="extype" name="org.apache.spark.mllib.linalg.distributed.IndexedRowMatrix">IndexedRowMatrix</span></span>, <span name="selfLoopWeight">selfLoopWeight: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.mllib.linalg.distributed.IndexedRowMatrix">IndexedRowMatrix</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
-                <span class="name">@deprecated</span>
-              
-        </dd><dt>Deprecated</dt><dd class="cmt"></dd></dl></div>
-    </li></ol>
-            </div>
+        
         </div>
 
         <div id="inheritedMembers">

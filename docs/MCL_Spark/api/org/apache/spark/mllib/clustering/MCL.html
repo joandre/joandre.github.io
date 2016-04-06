@@ -410,8 +410,8 @@ convergenceRate: 0.01, epsilon: 0.05, maxIterations: 10, selfLoopWeight: 0.1, gr
         <span class="name">inflation</span><span class="params">(<span name="mat">mat: <span class="extype" name="org.apache.spark.mllib.linalg.distributed.BlockMatrix">BlockMatrix</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.mllib.linalg.distributed.IndexedRowMatrix">IndexedRowMatrix</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Inflate matrix
-</p><div class="fullcomment"><div class="comment cmt"><p>Inflate matrix
+      <p class="shortcomment cmt">Inflate matrix</p><div class="fullcomment"><div class="comment cmt"><p>Inflate matrix</p><p>Prune and normalization are applied locally (on each row). So we avoid two more complete scanning of adjacency matrix.
+As explained in issue #8, pruning is applied on expanded matrix, so we take advantage of natural normalized expansion state.
 </p></div><dl class="paramcmts block"><dt class="param">mat</dt><dd class="cmt"><p>an adjacency matrix</p></dd><dt>returns</dt><dd class="cmt"><p>inflated adjacency matrix
 </p></dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -440,6 +440,22 @@ convergenceRate: 0.01, epsilon: 0.05, maxIterations: 10, selfLoopWeight: 0.1, gr
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="org.apache.spark.mllib.clustering.MCL#normalization" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="normalization(row:org.apache.spark.mllib.linalg.SparseVector):org.apache.spark.mllib.linalg.SparseVector"></a>
+      <a id="normalization(SparseVector):SparseVector"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">normalization</span><span class="params">(<span name="row">row: <span class="extype" name="org.apache.spark.mllib.linalg.SparseVector">SparseVector</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.mllib.linalg.SparseVector">SparseVector</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Normalize row
+</p><div class="fullcomment"><div class="comment cmt"><p>Normalize row
+</p></div><dl class="paramcmts block"><dt class="param">row</dt><dd class="cmt"><p>an unnormalized row of th adjacency matrix</p></dd><dt>returns</dt><dd class="cmt"><p>normalized row
+</p></dd></dl></div>
     </li><li name="org.apache.spark.mllib.clustering.MCL#normalization" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="normalization(mat:org.apache.spark.mllib.linalg.distributed.IndexedRowMatrix):org.apache.spark.mllib.linalg.distributed.IndexedRowMatrix"></a>
       <a id="normalization(IndexedRowMatrix):IndexedRowMatrix"></a>
@@ -483,30 +499,30 @@ convergenceRate: 0.01, epsilon: 0.05, maxIterations: 10, selfLoopWeight: 0.1, gr
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="org.apache.spark.mllib.clustering.MCL#removeWeakConnections" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="removeWeakConnections(mat:org.apache.spark.mllib.linalg.distributed.IndexedRowMatrix):org.apache.spark.mllib.linalg.distributed.IndexedRowMatrix"></a>
-      <a id="removeWeakConnections(IndexedRowMatrix):IndexedRowMatrix"></a>
+      <a id="removeWeakConnections(row:org.apache.spark.mllib.linalg.SparseVector):org.apache.spark.mllib.linalg.SparseVector"></a>
+      <a id="removeWeakConnections(SparseVector):SparseVector"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">removeWeakConnections</span><span class="params">(<span name="mat">mat: <span class="extype" name="org.apache.spark.mllib.linalg.distributed.IndexedRowMatrix">IndexedRowMatrix</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.mllib.linalg.distributed.IndexedRowMatrix">IndexedRowMatrix</span></span>
+        <span class="name">removeWeakConnections</span><span class="params">(<span name="row">row: <span class="extype" name="org.apache.spark.mllib.linalg.SparseVector">SparseVector</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.mllib.linalg.SparseVector">SparseVector</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Remove weakest connections from the graph</p><div class="fullcomment"><div class="comment cmt"><p>Remove weakest connections from the graph</p><p>Connections weight in adjacency matrix which is inferior to a very small value is set to 0
-</p></div><dl class="paramcmts block"><dt class="param">mat</dt><dd class="cmt"><p>an adjacency matrix</p></dd><dt>returns</dt><dd class="cmt"><p>sparsed adjacency matrix</p></dd></dl><dl class="attributes block"> <dt>To do</dt><dd><span class="cmt"><p>Add more complex pruning strategies.</p></span></dd><dt>See also</dt><dd><span class="cmt"><p>http://micans.org/mcl/index.html
+      <p class="shortcomment cmt">Remove weakest connections from a row</p><div class="fullcomment"><div class="comment cmt"><p>Remove weakest connections from a row</p><p>Connections weight in adjacency matrix which is inferior to a very small value is set to 0
+</p></div><dl class="paramcmts block"><dt class="param">row</dt><dd class="cmt"><p>a row of the adjacency matrix</p></dd><dt>returns</dt><dd class="cmt"><p>sparsed row</p></dd></dl><dl class="attributes block"> <dt>To do</dt><dd><span class="cmt"><p>Add more complex pruning strategies.</p></span></dd><dt>See also</dt><dd><span class="cmt"><p>http://micans.org/mcl/index.html
 </p></span></dd></dl></div>
     </li><li name="org.apache.spark.mllib.clustering.MCL#run" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="run(graph:org.apache.spark.graphx.Graph[String,Double]):org.apache.spark.mllib.clustering.MCLModel"></a>
-      <a id="run(Graph[String,Double]):MCLModel"></a>
+      <a id="run[VD](graph:org.apache.spark.graphx.Graph[VD,Double]):org.apache.spark.mllib.clustering.MCLModel"></a>
+      <a id="run[VD](Graph[VD,Double]):MCLModel"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">run</span><span class="params">(<span name="graph">graph: <span class="extype" name="org.apache.spark.graphx.Graph">Graph</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result">: <a href="MCLModel.html" class="extype" name="org.apache.spark.mllib.clustering.MCLModel">MCLModel</a></span>
+        <span class="name">run</span><span class="tparams">[<span name="VD">VD</span>]</span><span class="params">(<span name="graph">graph: <span class="extype" name="org.apache.spark.graphx.Graph">Graph</span>[<span class="extype" name="org.apache.spark.mllib.clustering.MCL.run.VD">VD</span>, <span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result">: <a href="MCLModel.html" class="extype" name="org.apache.spark.mllib.clustering.MCLModel">MCLModel</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Train MCL algorithm.</p><div class="fullcomment"><div class="comment cmt"><p>Train MCL algorithm.
@@ -524,7 +540,7 @@ convergenceRate: 0.01, epsilon: 0.05, maxIterations: 10, selfLoopWeight: 0.1, gr
         <span class="name">setEpsilon</span><span class="params">(<span name="epsilon">epsilon: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.spark.mllib.clustering.MCL">MCL</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Set the minimum percentage to get an edge weight to zero.</p><div class="fullcomment"><div class="comment cmt"><p>Set the minimum percentage to get an edge weight to zero.</p><p>Default: 0.05.
+      <p class="shortcomment cmt">Set the minimum percentage to get an edge weight to zero.</p><div class="fullcomment"><div class="comment cmt"><p>Set the minimum percentage to get an edge weight to zero.</p><p>Default: 0.01.
 </p></div><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt">IllegalArgumentException<p>epsilon must be higher than 0 and lower than 1
 </p></span></dd></dl></div>
     </li><li name="org.apache.spark.mllib.clustering.MCL#setExpansionRate" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
